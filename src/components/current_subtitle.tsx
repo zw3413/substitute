@@ -16,7 +16,7 @@ export const CurrentSubtitle = ({ cues }: { cues: Cue[] }) => {
   }, [timer, cues]);
 
   return (
-    <Text style={{ textAlign: "center" }} fontSize="xxl">
+    <Text style={{ textAlign: "center" }} fontSize="l">
       {current}
     </Text>
   );

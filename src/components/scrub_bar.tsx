@@ -97,6 +97,7 @@ export const ScrubBar = memo(({ cues }: { cues: Cue[] }) => {
         width: "100%",
         overflow: "hidden",
         cursor: "pointer",
+        height:"15px"
       }}
     >
       <canvas

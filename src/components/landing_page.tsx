@@ -30,15 +30,15 @@ export const LandingPage = ({
           }}
         >
           <Layout margin="l" style={{ width: "100%", alignItems: "center" }}>
-            <img width={elementSizes.logo} alt="project logo" src={Logo} />
+            {/* <img width={elementSizes.logo} alt="project logo" src={Logo} /> */}
             <Text style={{ textAlign: "center" }} padding="ml" fontSize="xl">
-              <Bold>Subs</Bold>titute
+              SubttileX
             </Text>
             <Text style={{ textAlign: "center" }} fontSize="ml">
-              A subtitle player for the browser
+              Error to load the subtitle, please feedback the issue.
             </Text>
           </Layout>
-          <Layout margin="ml">
+          {/* <Layout margin="ml">
             <SubtitleDropzone onLoad={setSubtitles} />
           </Layout>
           <Text margin="m" style={{ textAlign: "center" }} fontSize="m">
@@ -85,7 +85,7 @@ export const LandingPage = ({
           </Layout>
           <TextButton as="a" href="https://github.com/thelartians/substitute">
             <FaGithub size={elementSizes.icon} />
-          </TextButton>
+          </TextButton> */}
         </Layout>
       </Content>
     </Box>

@@ -153,7 +153,7 @@ export const SubtitlePlayer = ({
           <Layout
             style={{ flex: 1, minHeight: fullScreen ? "100vh" : undefined }}
           >
-            {fullScreen ? (
+            {/* {fullScreen ? (
               <TextButton
                 style={{ alignSelf: "flex-end" }}
                 onClick={() => setFullScreen(false)}
@@ -199,7 +199,7 @@ export const SubtitlePlayer = ({
                   <AiOutlineFullscreen />
                 </TextButton>
               </Layout>
-            )}
+            )} */}
 
             <ShiftColors foreground="white">
               <Layout style={{ flex: 1, justifyContent: "center" }}>
@@ -210,17 +210,28 @@ export const SubtitlePlayer = ({
             {!fullScreen && (
               <>
                 <Layout
-                  verticalMargin="m"
+                  verticalMargin="xxs"
                   style={{
                     flexDirection: "row",
                     justifyContent: "space-between",
                   }}
                 >
-                  <TimeStamp />
+                 
                   <Layout
-                    style={{ flexDirection: "row", alignItems: "center" }}
+                    style={{ flexDirection: "row", alignItems: "center", height :"24px" }}
                   >
-                    <Text>
+                     
+                    <TextButton
+                    onClick={() =>
+                      timer.running ? timer.pause() : timer.start()
+                    }
+                    fontSize="m"
+                  >
+                    {running ? <MdPause /> : <MdPlayArrow />}
+                  </TextButton>
+
+               
+                    {/* <Text>
                       Speed: <SpeedField speed={speed} />
                     </Text>
                     <TextButton
@@ -241,13 +252,19 @@ export const SubtitlePlayer = ({
                       fontSize="s"
                     >
                       <Bold>Reset</Bold>
-                    </TextButton>
+                    </TextButton> */}
                   </Layout>
+                  <TimeStamp />
                 </Layout>
 
-                <ProcessColors mode="DARKEN_BACKGROUND">
-                  <ScrubBar cues={cues} />
-                </ProcessColors>
+              
+
+                  <ProcessColors mode="DARKEN_BACKGROUND">
+                    <ScrubBar  cues={cues} />
+                  </ProcessColors>
+ 
+
+              
               </>
             )}
           </Layout>

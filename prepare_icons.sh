@@ -1,4 +1,3 @@
-
 if [ ! -f public/favicon.ico ]; then
   ICON=$(pwd)/resources/export/icon.svg
   echo "generating icons from ${ICON}"
